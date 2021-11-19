@@ -8,6 +8,25 @@
   <title>My site</title>
 </head>
 <body>
+  <header>
+    <div class="header">
+      <div class="container">
+        <div class="nav-head">
+          <nav>
+            <ul class="nav-links">
+              <li class="link"><a href="#">Главная</a></li>
+              <li class="link"><a href="#">Отзывы</a></li>
+              <li class="link"><a href="#">Instagram</a></li>
+              <li class="link"><a href="#">VKontakte</a></li>
+            </ul>
+            <div class="night-mode">
+              <div onclick="choose" class="night-button"><img src="https://img.icons8.com/ios/30/000000/partly-cloudy-night--v1.png"/></div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
   <!-- Главный экран -->
     <div class="row">
         <div class="container">
@@ -451,7 +470,17 @@
             </div>
       </div>
     </footer>
-    
+
+    <script>
+      var btns = document.getElementsByClassName('night-button');
+      var par = document.getElementsByClassName('header');
+      btns[0].onclick = function() {
+        par[0].classList.add("active");
+      }
+      btns[1].onclick = function() {
+        par[0].classList.remove("active");
+      }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
       $('.tabs-wrapper').each(function() {

@@ -6,3 +6,12 @@ $('.tabs-wrapper').each(function() {
 		ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass('active');
 });
+
+var btns = document.getElementsByClassName('night-button');
+var par = document.getElementsByClassName('header');
+btns[0].onclick = function() {
+  par[0].classList.add("active");
+}
+btns[1].onclick = function() {
+  par[0].classList.remove("active");
+}
